@@ -1,0 +1,68 @@
+[project]
+name = "tstoolkit"
+version = "0.1.0"
+description = "A toolkit for processing time series data with modern machine learning approaches."
+authors = [
+    {name = "Yoshua Frey", email = "yoshua.frey@aimino.de"},
+]
+dependencies = [
+    "tsai>=0.3.7",
+    "tables>=3.8.0",
+    "ipykernel>=6.25.1",
+    "fastdtw>=0.3.4",
+    "statsmodels>=0.14.0",
+    "sphinx>=7.2.6",
+    "nbsphinx>=0.9.3",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=3.3.3",
+    "pytest>=7.4.0",
+    "nox>=2023.4.22",
+]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+# Fixes differences in isort and ruff 1st and 3rd party imports
+src = ["src"]
+select = [
+    "E", # pycodestylye errors
+    "F", # Pyflakes
+    "D", # pydocstyle
+    "I", # isort
+    "N", # pep8-naming
+    "ERA", # eradicate
+    "SIM", # flake8-simplify
+    "PTH", # flake8-pathlib,
+    "T20", # flake8-no-print
+    "PD", # pandas-vet
+    "UP", # pyupgrade
+    "RUF", # Ruff-specific-rules
+    "TRY", # tryceratops
+    "ANN", # flake8-annotations
+    "TID252", # relative-imports
+    "B", # bugbear
+]
+ignore = [
+    "D100", # docstring in public module
+    "D106", # docstring in public nested class
+    "ANN101", # missing type annotation for self in method
+    "ANN102", # missing type annotation for cls in classmethod
+    "ANN003", # missing type annotation for **kwargs in class
+    "ANN401", # dynamic type annotation for *args and **kwargs
+    "TRY003", # longer messages in the raised exception
+]
+
+target-version = "py311"
+
+[tool.ruff.pydocstyle]
+convention = "google"

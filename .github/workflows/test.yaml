@@ -1,0 +1,56 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+    branches: [ "main", "stable" ]
+  merge_group:
+    branches: [ "main", "stable" ]
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  nox-tests:
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+      pull-requests: read
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+        os: [ubuntu-latest]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            code:
+              - "pdm.lock"
+              - "**.py"
+              - "tests/**"
+      - uses: pdm-project/setup-pdm@v3
+        if: steps.changes.outputs.code == 'true'
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: false
+      - name: Run tests
+        if: steps.changes.outputs.code == 'true'
+        run: |
+          pipx run nox --session test
