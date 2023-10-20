@@ -6,7 +6,7 @@ groups = ["default", "dev"]
 cross_platform = true
 static_urls = false
 lock_version = "4.3"
-content_hash = "sha256:86faa17a36d5601cacce86752172508838c6e5855b7516d0d8caf508924a4687"
+content_hash = "sha256:8acaa00b9943d89248943e6e0076073131a21143d18937a43d51e2f4c958a0b3"
 
 [[package]]
 name = "alabaster"
@@ -249,6 +249,22 @@ files = [
     {file = "cmake-3.27.1-py2.py3-none-win_amd64.whl", hash = "sha256:628f75286475b89d6566db62c0869de5f0a07ad9bba10bebe6a48012fa1ee777"},
     {file = "cmake-3.27.1-py2.py3-none-win_arm64.whl", hash = "sha256:ee7a47e37a29b8124d9125a8c390fb94822a2695d80151560004d4f4f78c0ad7"},
     {file = "cmake-3.27.1.tar.gz", hash = "sha256:7ee6af09b2b575a491483b72927ee7e4beb59e7fb86e6d905a7027607a3f367e"},
+]
+
+[[package]]
+name = "cmdstanpy"
+version = "1.2.0"
+requires_python = ">=3.8"
+summary = "Python interface to CmdStan"
+dependencies = [
+    "numpy>=1.21",
+    "pandas",
+    "stanio~=0.3.0",
+    "tqdm",
+]
+files = [
+    {file = "cmdstanpy-1.2.0-py3-none-any.whl", hash = "sha256:bbfe7b5fd64be0f559ca6496c3302b696497c1477dd73f106c1c601ea7e0550d"},
+    {file = "cmdstanpy-1.2.0.tar.gz", hash = "sha256:bdf55ab76f9eea01763b8990a56ff55d03e69ec31d9613fdbbe4c452126ff1bb"},
 ]
 
 [[package]]
@@ -548,6 +564,19 @@ files = [
 ]
 
 [[package]]
+name = "holidays"
+version = "0.35"
+requires_python = ">=3.8"
+summary = "Generate and work with holidays in Python"
+dependencies = [
+    "python-dateutil",
+]
+files = [
+    {file = "holidays-0.35-py3-none-any.whl", hash = "sha256:3e179ff248f86dee813160c92e2c4babe3bb3c732287499430d1e3ee90c15f16"},
+    {file = "holidays-0.35.tar.gz", hash = "sha256:e62b797ca3ba2366093458cda0cde33d65e7168be8104815b4149afd4ea4a9ed"},
+]
+
+[[package]]
 name = "identify"
 version = "2.5.26"
 requires_python = ">=3.8"
@@ -591,6 +620,16 @@ dependencies = [
 files = [
     {file = "imbalanced-learn-0.11.0.tar.gz", hash = "sha256:7582ae8858e6db0b92fef97dd08660a18297ee128d78c2abdc006b8bd86b8fdc"},
     {file = "imbalanced_learn-0.11.0-py3-none-any.whl", hash = "sha256:20dc7dee3c838b4d213f021bb2b4007862704160d06bd292a6bdf931590b2516"},
+]
+
+[[package]]
+name = "importlib-resources"
+version = "6.1.0"
+requires_python = ">=3.8"
+summary = "Read resources from Python packages"
+files = [
+    {file = "importlib_resources-6.1.0-py3-none-any.whl", hash = "sha256:aa50258bbfa56d4e33fbd8aa3ef48ded10d1735f11532b8df95388cc6bdb7e83"},
+    {file = "importlib_resources-6.1.0.tar.gz", hash = "sha256:9d48dcccc213325e810fd723e7fbb45ccb39f6cf5c31f00cf2b965f5f10f3cb9"},
 ]
 
 [[package]]
@@ -1486,6 +1525,29 @@ files = [
 ]
 
 [[package]]
+name = "prophet"
+version = "1.1.5"
+requires_python = ">=3.7"
+summary = "Automatic Forecasting Procedure"
+dependencies = [
+    "cmdstanpy>=1.0.4",
+    "holidays>=0.25",
+    "importlib-resources",
+    "matplotlib>=2.0.0",
+    "numpy>=1.15.4",
+    "pandas>=1.0.4",
+    "tqdm>=4.36.1",
+]
+files = [
+    {file = "prophet-1.1.5-py3-none-macosx_10_9_x86_64.whl", hash = "sha256:1c522a76ce49264ad140bbebca7d1c7cdc9ebfe718cdcaaf2c289db96e9e03bd"},
+    {file = "prophet-1.1.5-py3-none-macosx_11_0_arm64.whl", hash = "sha256:24e7ce972f95068af7074dbad5846f83485257366b023af44e86716fb438bb0d"},
+    {file = "prophet-1.1.5-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:cd5991a86dc0a86e09da550fb072ade8714dc17741da0231907d972429476a54"},
+    {file = "prophet-1.1.5-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7761d127a41d3434b83d16f27b41cdc71052c7d98c0d6013a227a0bc55347da9"},
+    {file = "prophet-1.1.5-py3-none-win_amd64.whl", hash = "sha256:337d9cf7728b8d3ef18a8304aa90c079f206aead15d9f0beff87cad8050553ff"},
+    {file = "prophet-1.1.5.tar.gz", hash = "sha256:80973c0b8a22d835bfa9d6665a78ebc63115135eaef0f73b46ee14e9bad3ca1a"},
+]
+
+[[package]]
 name = "psutil"
 version = "5.9.5"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
@@ -2069,6 +2131,19 @@ dependencies = [
 files = [
     {file = "stack_data-0.6.2-py3-none-any.whl", hash = "sha256:cbb2a53eb64e5785878201a97ed7c7b94883f48b87bfb0bbe8b623c74679e4a8"},
     {file = "stack_data-0.6.2.tar.gz", hash = "sha256:32d2dd0376772d01b6cb9fc996f3c8b57a357089dec328ed4b6553d037eaf815"},
+]
+
+[[package]]
+name = "stanio"
+version = "0.3.0"
+requires_python = ">=3.8"
+summary = ""
+dependencies = [
+    "numpy",
+]
+files = [
+    {file = "stanio-0.3.0-py3-none-any.whl", hash = "sha256:2d34b5ebe9ad8fcd137437209bf4b53846d88dbe933441aca5d83fd32f9b0c7e"},
+    {file = "stanio-0.3.0.tar.gz", hash = "sha256:0c504ae671b8d526a1da71185ac02a2775508ffe6d3db91f242eac85bcf6046f"},
 ]
 
 [[package]]
