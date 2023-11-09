@@ -3,7 +3,7 @@ name = "tstoolkit"
 version = "0.1.0"
 description = "A toolkit for processing time series data with modern machine learning approaches."
 authors = [
-    {name = "Yoshua Frey", email = "yoshua.frey@aimino.de"},
+    {name = "Hassan Ahmed", email = "hassanahmed8725@gmail.com"},
 ]
 dependencies = [
     "tsai>=0.3.7",
