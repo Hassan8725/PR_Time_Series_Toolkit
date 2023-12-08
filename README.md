@@ -1,7 +1,7 @@
 # Time Series Toolkit
 
 <div align="center">
-  <img src="assets/logo.png" width="300" height="300" alt="Project Logo">
+  <img src="assets/tstoolkit_logo.png" width="1000" height="300" alt="Project Logo">
 </div>
 
 
