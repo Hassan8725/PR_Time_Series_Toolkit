@@ -4,6 +4,16 @@
   <img src="assets/tstoolkit_logo.png" width="1000" height="300" alt="Project Logo">
 </div>
 
+![Build Status](https://github.com/Hassan8725/PR_Ts_Toolkit/workflows/CI/badge.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Coverage Status](https://coveralls.io/repos/github/Hassan8725/PR_Ts_Toolkit/badge.svg?branch=master)](https://coveralls.io/github/Hassan8725/PR_Ts_Toolkit?branch=master)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Hassan8725/PR_Ts_Toolkit)
+![GitHub issues](https://img.shields.io/github/issues-raw/Hassan8725/PR_Ts_Toolkit)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/Hassan8725/PR_Ts_Toolkit)
+![GitHub all releases](https://img.shields.io/github/downloads/Hassan8725/PR_Ts_Toolkit/total)
+![GitHub contributors](https://img.shields.io/github/contributors/Hassan8725/PR_Ts_Toolkit)
+![GitHub last commit](https://img.shields.io/github/last-commit/Hassan8725/PR_Ts_Toolkit)
+
 
 ## Table of Contents
 - [Introduction](#introduction)
