@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Forecasting &#8212; Time Series Toolkit  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=0e68e314" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cd74e5c4" />
+    
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Gap Filling" href="gap_filling.html" />
+    <link rel="prev" title="Anomaly Detection" href="anomaly_detection.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gap_filling.html" title="Gap Filling"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="anomaly_detection.html" title="Anomaly Detection"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Time Series Toolkit</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../toolkit.html" accesskey="U">Toolkit</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Forecasting</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="forecasting">
+<h1>Forecasting<a class="headerlink" href="#forecasting" title="Link to this heading">¶</a></h1>
+<section id="tstoolkit-forecasting-models-module">
+<h2>tstoolkit.forecasting_models module<a class="headerlink" href="#tstoolkit-forecasting-models-module" title="Link to this heading">¶</a></h2>
+<dl class="py class" id="module-tstoolkit.forecasting_models">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.LearnerManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.forecasting_models.</span></span><span class="sig-name descname"><span class="pre">LearnerManager</span></span><a class="headerlink" href="#tstoolkit.forecasting_models.LearnerManager" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that manages the learners.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.SplitType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.forecasting_models.</span></span><span class="sig-name descname"><span class="pre">SplitType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.forecasting_models.SplitType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enum that represents the split type.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.SplitType.TEST">
+<span class="sig-name descname"><span class="pre">TEST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'test'</span></em><a class="headerlink" href="#tstoolkit.forecasting_models.SplitType.TEST" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.SplitType.TRAIN">
+<span class="sig-name descname"><span class="pre">TRAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'train'</span></em><a class="headerlink" href="#tstoolkit.forecasting_models.SplitType.TRAIN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.SplitType.VALID">
+<span class="sig-name descname"><span class="pre">VALID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'valid'</span></em><a class="headerlink" href="#tstoolkit.forecasting_models.SplitType.VALID" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.forecasting_models.</span></span><span class="sig-name descname"><span class="pre">TsaiLearnerManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arch_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artifacts_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipelines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Pipeline</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">((),)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callbacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Callback</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">((),)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tstoolkit.forecasting_models.LearnerManager" title="tstoolkit.forecasting_models.LearnerManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">LearnerManager</span></code></a></p>
+<p>A class that manages the Tsai learners.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arch</strong> (<em>str</em>) – The architecture to use.</p></li>
+<li><p><strong>arch_config</strong> (<em>dict</em>) – The architecture configuration.</p></li>
+<li><p><strong>loss_func</strong> (<em>Callable</em>) – The loss function for training.</p></li>
+<li><p><strong>metrics</strong> (<em>list</em><em>[</em><em>Callable</em><em>]</em>) – Evaluation metrics.</p></li>
+<li><p><strong>x</strong> (<em>np.ndarray</em>) – The inputs x.</p></li>
+<li><p><strong>y</strong> (<em>np.ndarray</em>) – The inputs y.</p></li>
+<li><p><strong>splits</strong> (<em>tuple</em>) – The train/val/test splits.</p></li>
+<li><p><strong>artifacts_path</strong> (<em>Path</em>) – The path where to store
+the artifacts (checkpoints).</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – The batch size.</p></li>
+<li><p><strong>pipelines</strong> (<em>Iterable</em><em>[</em><em>Pipeline</em><em>]</em><em>, </em><em>optional</em>) – The data-preprocessing pipelines.</p></li>
+<li><p><strong>callbacks</strong> (<em>Iterable</em><em>[</em><em>Callback</em><em>]</em><em>, </em><em>optional</em>) – The callbacks used during training.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tstoolkit.forecasting_models.SplitType" title="tstoolkit.forecasting_models.SplitType"><span class="pre">SplitType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SplitType.VALID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager.evaluate" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the validation set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.ndarray</em>) – The inputs of shape (batch_size, n_vars, seq_len)</p></li>
+<li><p><strong>y_true</strong> (<em>np.ndarray</em>) – The targets of shape (batch_size, n_vars, horizon)</p></li>
+<li><p><strong>split_type</strong> (<a class="reference internal" href="#tstoolkit.forecasting_models.SplitType" title="tstoolkit.forecasting_models.SplitType"><em>SplitType</em></a><em>, </em><em>optional</em>) – The split type., defaults to SplitType.VALID</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Evaluation Metrics Value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager.export_model">
+<span class="sig-name descname"><span class="pre">export_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager.export_model" title="Link to this definition">¶</a></dt>
+<dd><p>Exports the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>artifact_name</strong> (<em>str</em>) – Name of the artifact to be saved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager.find_max_lr">
+<span class="sig-name descname"><span class="pre">find_max_lr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager.find_max_lr" title="Link to this definition">¶</a></dt>
+<dd><p>Find the maximum learning rate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Max Learning Rate</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fits the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>epochs</strong> (<em>int</em>) – Number of Epochs</p></li>
+<li><p><strong>lr_max</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Learning Rate, defaults to None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager.get_forecast_plot">
+<span class="sig-name descname"><span class="pre">get_forecast_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sel_vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager.get_forecast_plot" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the forecast plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.ndarray</em>) – The inputs of shape (batch_size, n_vars, seq_len)</p></li>
+<li><p><strong>y_true</strong> (<em>np.ndarray</em>) – The targets of shape (batch_size, n_vars, horizon)</p></li>
+<li><p><strong>y_pred</strong> (<em>np.ndarray</em>) – The predictions of shape (batch_size, n_vars, horizon)</p></li>
+<li><p><strong>sel_vars</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to plot the variable separately., defaults to True</p></li>
+<li><p><strong>idx</strong> (<em>int</em><em>, </em><em>optional</em>) – The index of the sample in the batch to plot., defaults to 0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager.get_summary">
+<span class="sig-name descname"><span class="pre">get_summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager.get_summary" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the summary of the learner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Summary</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager.load_model">
+<span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager.load_model" title="Link to this definition">¶</a></dt>
+<dd><p>Loads the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>artifact_name</strong> (<em>str</em>) – Name of the artifact to be loaded.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiLearnerManager.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiLearnerManager.predict" title="Link to this definition">¶</a></dt>
+<dd><p>Predicts the targets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>np.ndarray</em>) – The inputs of shape (batch_size, n_vars, seq_len)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions of shape (batch_size, n_vars, horizon)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.forecasting_models.</span></span><span class="sig-name descname"><span class="pre">TsaiModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiModels" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enum that represents the type of Tsai model.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiModels.INCEPTION_TIME_PLUS">
+<span class="sig-name descname"><span class="pre">INCEPTION_TIME_PLUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'InceptionTimePlus'</span></em><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiModels.INCEPTION_TIME_PLUS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.forecasting_models.TsaiModels.PATCH_TST">
+<span class="sig-name descname"><span class="pre">PATCH_TST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PatchTST'</span></em><a class="headerlink" href="#tstoolkit.forecasting_models.TsaiModels.PATCH_TST" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Forecasting</a><ul>
+<li><a class="reference internal" href="#tstoolkit-forecasting-models-module">tstoolkit.forecasting_models module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.LearnerManager"><code class="docutils literal notranslate"><span class="pre">LearnerManager</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.SplitType"><code class="docutils literal notranslate"><span class="pre">SplitType</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.SplitType.TEST"><code class="docutils literal notranslate"><span class="pre">SplitType.TEST</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.SplitType.TRAIN"><code class="docutils literal notranslate"><span class="pre">SplitType.TRAIN</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.SplitType.VALID"><code class="docutils literal notranslate"><span class="pre">SplitType.VALID</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager.evaluate"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.evaluate()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager.export_model"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.export_model()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager.find_max_lr"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.find_max_lr()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager.fit"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager.get_forecast_plot"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.get_forecast_plot()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager.get_summary"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.get_summary()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager.load_model"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.load_model()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiLearnerManager.predict"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.predict()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiModels"><code class="docutils literal notranslate"><span class="pre">TsaiModels</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiModels.INCEPTION_TIME_PLUS"><code class="docutils literal notranslate"><span class="pre">TsaiModels.INCEPTION_TIME_PLUS</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.forecasting_models.TsaiModels.PATCH_TST"><code class="docutils literal notranslate"><span class="pre">TsaiModels.PATCH_TST</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="anomaly_detection.html"
+                          title="previous chapter">Anomaly Detection</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="gap_filling.html"
+                          title="next chapter">Gap Filling</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/forecasting.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gap_filling.html" title="Gap Filling"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="anomaly_detection.html" title="Anomaly Detection"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Time Series Toolkit</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../toolkit.html" >Toolkit</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Forecasting</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright PR Lab.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+modules
+=======
+
+tstoolkit.anomaly\_detection module
+-----------------------------------
+
+.. automodule:: tstoolkit.anomaly_detection
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tstoolkit.data\_preprocess module
+---------------------------------
+
+.. automodule:: tstoolkit.data_preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tstoolkit.gap\_filling module
+-----------------------------
+
+.. automodule:: tstoolkit.gap_filling
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tstoolkit.models module
+-----------------------
+
+.. automodule:: tstoolkit.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tstoolkit.similarity module
+---------------------------
+
+.. automodule:: tstoolkit.similarity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tstoolkit.utils module
+----------------------
+
+.. automodule:: tstoolkit.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: tstoolkit
+   :members:
+   :undoc-members:
+   :show-inheritance:
