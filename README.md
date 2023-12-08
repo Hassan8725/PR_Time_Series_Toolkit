@@ -1,9 +1,23 @@
 # Time Series Toolkit
 
 <div align="center">
-  <img src="assets/logo.png" width="300" height="300" alt="Project Logo">
+  <img src="assets/tstoolkit_logo.png" width="1000" height="250" alt="Project Logo">
 </div>
 
+<div align="center">
+
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.0-brightgreen.svg)
+[![pre-commit](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/pre-commit.yaml)
+[![Test](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/test.yaml/badge.svg)](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/test.yaml)
+![Documentation](https://img.shields.io/badge/Documentation-Sphinx-blue.svg)
+![Tutorials](https://img.shields.io/badge/Tutorials-Available-green)
+[![Python Version](https://img.shields.io/badge/Python-3.11.5-blue.svg)](https://www.python.org/downloads/)
+[![Conda Version](https://img.shields.io/badge/Conda-23.5.2-blue.svg)](https://docs.conda.io/en/latest/)
+[![PDM Version](https://img.shields.io/badge/PDM-2.9.0-blue.svg)](https://pdm.fming.dev/)
+[![tsai Version](https://img.shields.io/badge/tsai-%E2%89%A50.3.7-blue.svg)](https://pypi.org/project/tsai/)
+
+</div>
 
 ## Table of Contents
 - [Introduction](#introduction)
