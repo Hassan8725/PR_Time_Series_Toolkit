@@ -5,6 +5,9 @@
 </div>
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.0-brightgreen.svg)
+[![pre-commit](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/pre-commit.yaml)
+[![Test](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/test.yaml/badge.svg)](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/test.yaml)
 
 ## Table of Contents
 - [Introduction](#introduction)
