@@ -165,4 +165,5 @@ cython_debug/
 # ignore the data folder
 data/
 artifacts/
-run/
+run
+tutorials/run
