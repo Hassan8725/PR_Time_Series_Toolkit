@@ -12,9 +12,10 @@
 [![Test](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/test.yaml/badge.svg)](https://github.com/Hassan8725/PR_Ts_Toolkit/actions/workflows/test.yaml)
 ![Documentation](https://img.shields.io/badge/Documentation-Sphinx-blue.svg)
 ![Tutorials](https://img.shields.io/badge/Tutorials-Available-green)
-[![Conda Version](https://img.shields.io/badge/Conda-23.5.2-blue.svg)](https://docs.conda.io/en/latest/)
 [![Python Version](https://img.shields.io/badge/Python-3.11.5-blue.svg)](https://www.python.org/downloads/)
+[![Conda Version](https://img.shields.io/badge/Conda-23.5.2-blue.svg)](https://docs.conda.io/en/latest/)
 [![PDM Version](https://img.shields.io/badge/PDM-2.9.0-blue.svg)](https://pdm.fming.dev/)
+[![tsai Version](https://img.shields.io/badge/tsai-%E2%89%A50.3.7-blue.svg)](https://pypi.org/project/tsai/)
 
 </div>
 
