@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Utils &#8212; Time Series Toolkit  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=0e68e314" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c2bf3912" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Similarity" href="similarity.html" />
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="similarity.html" title="Similarity"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Time Series Toolkit</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../toolkit.html" accesskey="U">Toolkit</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Utils</a></li>
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+  <section id="utils">
+<h1>Utils<a class="headerlink" href="#utils" title="Link to this heading">¶</a></h1>
+<section id="module-tstoolkit.utils">
+<span id="tstoolkit-utils-module"></span><h2>tstoolkit.utils module<a class="headerlink" href="#module-tstoolkit.utils" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.utils.</span></span><span class="sig-name descname"><span class="pre">ShowGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_losses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Callback</span></code></p>
+<p>(Modified) Update a graph of training and validation loss</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.after_epoch">
+<span class="sig-name descname"><span class="pre">after_epoch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.after_epoch" title="Link to this definition">¶</a></dt>
+<dd><p>Plot validation loss in the pbar graph</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.after_fit">
+<span class="sig-name descname"><span class="pre">after_fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.after_fit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.after_train">
+<span class="sig-name descname"><span class="pre">after_train</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.after_train" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.before_fit">
+<span class="sig-name descname"><span class="pre">before_fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.before_fit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.names">
+<span class="sig-name descname"><span class="pre">names</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['train',</span> <span class="pre">'valid']</span></em><a class="headerlink" href="#tstoolkit.utils.ShowGraph.names" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.order">
+<span class="sig-name descname"><span class="pre">order</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">65</span></em><a class="headerlink" href="#tstoolkit.utils.ShowGraph.order" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.run_valid">
+<span class="sig-name descname"><span class="pre">run_valid</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#tstoolkit.utils.ShowGraph.run_valid" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.update_graph">
+<span class="sig-name descname"><span class="pre">update_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(6,</span> <span class="pre">4)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.update_graph" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tstoolkit.utils.mae">
+<span class="sig-prename descclassname"><span class="pre">tstoolkit.utils.</span></span><span class="sig-name descname"><span class="pre">mae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targ</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.mae" title="Link to this definition">¶</a></dt>
+<dd><p>Mean absolute error between <cite>inp</cite> and <cite>targ</cite>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tstoolkit.utils.mse">
+<span class="sig-prename descclassname"><span class="pre">tstoolkit.utils.</span></span><span class="sig-name descname"><span class="pre">mse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targ</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.mse" title="Link to this definition">¶</a></dt>
+<dd><p>Mean squared error between <cite>inp</cite> and <cite>targ</cite>.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Utils</a><ul>
+<li><a class="reference internal" href="#module-tstoolkit.utils">tstoolkit.utils module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph"><code class="docutils literal notranslate"><span class="pre">ShowGraph</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.after_epoch"><code class="docutils literal notranslate"><span class="pre">ShowGraph.after_epoch()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.after_fit"><code class="docutils literal notranslate"><span class="pre">ShowGraph.after_fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.after_train"><code class="docutils literal notranslate"><span class="pre">ShowGraph.after_train()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.before_fit"><code class="docutils literal notranslate"><span class="pre">ShowGraph.before_fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.names"><code class="docutils literal notranslate"><span class="pre">ShowGraph.names</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.order"><code class="docutils literal notranslate"><span class="pre">ShowGraph.order</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.run_valid"><code class="docutils literal notranslate"><span class="pre">ShowGraph.run_valid</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.update_graph"><code class="docutils literal notranslate"><span class="pre">ShowGraph.update_graph()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tstoolkit.utils.mae"><code class="docutils literal notranslate"><span class="pre">mae()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.mse"><code class="docutils literal notranslate"><span class="pre">mse()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="similarity.html"
+                          title="previous chapter">Similarity</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="similarity.html" title="Similarity"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Time Series Toolkit</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../toolkit.html" >Toolkit</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Utils</a></li>
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Aimino Tech GmbH.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

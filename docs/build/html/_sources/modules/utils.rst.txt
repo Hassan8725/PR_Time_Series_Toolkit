@@ -1,0 +1,10 @@
+Utils
+=====
+
+tstoolkit.utils module
+----------------------
+
+.. automodule:: tstoolkit.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

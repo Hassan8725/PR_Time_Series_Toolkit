@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>modules &#8212; Time Series Toolkit  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=0e68e314" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c2bf3912" />
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tutorials" href="tutorials.html" />
+    <link rel="prev" title="Toolkit" href="toolkit.html" />
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorials.html" title="tutorials"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="toolkit.html" title="Toolkit"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Time Series Toolkit</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="toolkit.html" accesskey="U">Toolkit</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">modules</a></li>
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+  <section id="modules">
+<h1>modules<a class="headerlink" href="#modules" title="Link to this heading">¶</a></h1>
+<section id="module-tstoolkit.anomaly_detection">
+<span id="tstoolkit-anomaly-detection-module"></span><h2>tstoolkit.anomaly_detection module<a class="headerlink" href="#module-tstoolkit.anomaly_detection" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.anomaly_detection.</span></span><span class="sig-name descname"><span class="pre">TimeSeriesAnomalyDetector</span></span><a class="headerlink" href="#tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>TimeSeriesAnomalyDetector Class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit an anomaly detection model to the time series data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>pd.DataFrame</em>) – Timeseries DataFrame.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.plot_anomalies">
+<span class="sig-name descname"><span class="pre">plot_anomalies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.plot_anomalies" title="Link to this definition">¶</a></dt>
+<dd><p>Plot the time series data with detected anomalies highlighted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'isolation_forest'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.predict" title="Link to this definition">¶</a></dt>
+<dd><p>Predict anomalies in the time series data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>algorithm</strong> (<em>str</em><em>, </em><em>optional</em>) – The algorithm to use
+for anomaly detection. Options available are
+isolation_forest, local_outlier_factor
+and one_class_svm, defaults to “isolation_forest”</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Unsupported algorithm</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of anomaly scores</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tstoolkit.data_preprocess">
+<span id="tstoolkit-data-preprocess-module"></span><h2>tstoolkit.data_preprocess module<a class="headerlink" href="#module-tstoolkit.data_preprocess" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.data_preprocess.DataManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.data_preprocess.</span></span><span class="sig-name descname"><span class="pre">DataManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artifacts_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Path('artifacts')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.data_preprocess.DataManager" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to manage data for the toolkit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>Path</em>) – The path to the data file.</p></li>
+<li><p><strong>artifacts_path</strong> (<em>Path</em><em>, </em><em>optional</em>) – The path where to
+store the artifacts, defaults to Path(“artifacts”)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.data_preprocess.DataManager.get_forecasting_data">
+<span class="sig-name descname"><span class="pre">get_forecasting_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps_past</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps_future</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">24</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#tstoolkit.data_preprocess.DataManager.get_forecasting_data" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the forecasting data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – Data</p></li>
+<li><p><strong>steps_past</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of steps to look back
+, defaults to 200</p></li>
+<li><p><strong>steps_future</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of steps to look forward
+, defaults to 24</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The inputs <cite>x</cite> of shape (batch_size, n_vars, seq_len)
+and outputs <a href="#id1"><span class="problematic" id="id2">`</span></a>y`of shape (batch_size, n_vars, horizon).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[np.ndarray, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.data_preprocess.DataManager.interpolate_nulls">
+<span class="sig-name descname"><span class="pre">interpolate_nulls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polynomial_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#tstoolkit.data_preprocess.DataManager.interpolate_nulls" title="Link to this definition">¶</a></dt>
+<dd><p>Fill nulls in the data using interpolation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – Data with nulls</p></li>
+<li><p><strong>interpolation_method</strong> (<em>str</em><em>, </em><em>optional</em>) – Interpolation Method.
+All possible Methods are
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.interpolate()</span></code>
+, defaults to “linear”</p></li>
+<li><p><strong>polynomial_order</strong> (<em>int</em><em>, </em><em>optional</em>) – Order for polynomial interpolation, defaults to 5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Data with gaps filled</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.data_preprocess.DataManager.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#tstoolkit.data_preprocess.DataManager.load_data" title="Link to this definition">¶</a></dt>
+<dd><p>Get HD5 Format File.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>data</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.data_preprocess.DataManager.preprocess_data">
+<span class="sig-name descname"><span class="pre">preprocess_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'DateTime'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'PropertyID'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Value'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#tstoolkit.data_preprocess.DataManager.preprocess_data" title="Link to this definition">¶</a></dt>
+<dd><p>Reshape and pivot the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – Data to be preprocessed</p></li>
+<li><p><strong>index</strong> (<em>str</em><em>, </em><em>optional</em>) – The index to use, defaults to “DateTime”</p></li>
+<li><p><strong>columns</strong> (<em>str</em><em>, </em><em>optional</em>) – Column to use as Sensor ID, defaults to “PropertyID”</p></li>
+<li><p><strong>values</strong> (<em>str</em><em>, </em><em>optional</em>) – Column to use as sensor value, defaults to “Value”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Preprocessed data</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.data_preprocess.DataManager.split_data">
+<span class="sig-name descname"><span class="pre">split_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps_past</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps_future</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">24</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_plot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#tstoolkit.data_preprocess.DataManager.split_data" title="Link to this definition">¶</a></dt>
+<dd><p>Creates the train/validation/test splits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – Data</p></li>
+<li><p><strong>steps_past</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of steps to look back as history, defaults to 200</p></li>
+<li><p><strong>steps_future</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of steps to look forward, defaults to 24</p></li>
+<li><p><strong>validation_size</strong> (<em>float</em><em>, </em><em>optional</em>) – The size of the validation set, defaults to 0.1</p></li>
+<li><p><strong>test_size</strong> (<em>float</em><em>, </em><em>optional</em>) – The size of the test set, defaults to 0.2</p></li>
+<li><p><strong>show_plot</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to show the split plot, defaults to True</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The train/validation/test splits indexes.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.data_preprocess.DataManager.standardize_data">
+<span class="sig-name descname"><span class="pre">standardize_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artifact_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'standardize_pipe'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#tstoolkit.data_preprocess.DataManager.standardize_data" title="Link to this definition">¶</a></dt>
+<dd><p>Standardize the data using a standardization pipeline.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – Data to be standardized</p></li>
+<li><p><strong>splits</strong> (<em>tuple</em>) – The train/validation/test splits.</p></li>
+<li><p><strong>columns</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The columns to standardize</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to show the pipeline logs, defaults to False</p></li>
+<li><p><strong>artifact_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the artifact to be saved
+, defaults to “standardize_pipe”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Standardized Data</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tstoolkit.gap_filling">
+<span id="tstoolkit-gap-filling-module"></span><h2>tstoolkit.gap_filling module<a class="headerlink" href="#module-tstoolkit.gap_filling" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.gap_filling.</span></span><span class="sig-name descname"><span class="pre">TimeSeriesGapFiller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seasonal_periods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for Filling Gaps in Time Series data.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_ts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_ts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fitting Gap Filling Method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>first_ts</strong> (<em>pd.Series</em>) – Part of Time series before the gap.</p></li>
+<li><p><strong>second_ts</strong> (<em>pd.Series</em>) – Part of time series after the gap.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller.merge_ts">
+<span class="sig-name descname"><span class="pre">merge_ts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.merge_ts" title="Link to this definition">¶</a></dt>
+<dd><p>Returning a merged time series of all three parts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Merged Time series</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.Series</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller.plot_ts">
+<span class="sig-name descname"><span class="pre">plot_ts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.plot_ts" title="Link to this definition">¶</a></dt>
+<dd><p>Plot all three parts of time series combined.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.predict" title="Link to this definition">¶</a></dt>
+<dd><p>Getting the filled time series.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Filled Time Series</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.Series</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tstoolkit.models">
+<span id="tstoolkit-models-module"></span><h2>tstoolkit.models module<a class="headerlink" href="#module-tstoolkit.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.models.LearnerManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.models.</span></span><span class="sig-name descname"><span class="pre">LearnerManager</span></span><a class="headerlink" href="#tstoolkit.models.LearnerManager" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that manages the learners.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.models.SplitType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.models.</span></span><span class="sig-name descname"><span class="pre">SplitType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.models.SplitType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enum that represents the split type.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.models.SplitType.TEST">
+<span class="sig-name descname"><span class="pre">TEST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'test'</span></em><a class="headerlink" href="#tstoolkit.models.SplitType.TEST" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.models.SplitType.TRAIN">
+<span class="sig-name descname"><span class="pre">TRAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'train'</span></em><a class="headerlink" href="#tstoolkit.models.SplitType.TRAIN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.models.SplitType.VALID">
+<span class="sig-name descname"><span class="pre">VALID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'valid'</span></em><a class="headerlink" href="#tstoolkit.models.SplitType.VALID" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.models.</span></span><span class="sig-name descname"><span class="pre">TsaiLearnerManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arch_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artifacts_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipelines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Pipeline</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">((),)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callbacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Callback</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">((),)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tstoolkit.models.LearnerManager" title="tstoolkit.models.LearnerManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">LearnerManager</span></code></a></p>
+<p>A class that manages the Tsai learners.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arch</strong> (<em>str</em>) – The architecture to use.</p></li>
+<li><p><strong>arch_config</strong> (<em>dict</em>) – The architecture configuration.</p></li>
+<li><p><strong>loss_func</strong> (<em>Callable</em>) – The loss function for training.</p></li>
+<li><p><strong>metrics</strong> (<em>list</em><em>[</em><em>Callable</em><em>]</em>) – Evaluation metrics.</p></li>
+<li><p><strong>x</strong> (<em>np.ndarray</em>) – The inputs x.</p></li>
+<li><p><strong>y</strong> (<em>np.ndarray</em>) – The inputs y.</p></li>
+<li><p><strong>splits</strong> (<em>tuple</em>) – The train/val/test splits.</p></li>
+<li><p><strong>artifacts_path</strong> (<em>Path</em>) – The path where to store
+the artifacts (checkpoints).</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – The batch size.</p></li>
+<li><p><strong>pipelines</strong> (<em>Iterable</em><em>[</em><em>Pipeline</em><em>]</em><em>, </em><em>optional</em>) – The data-preprocessing pipelines.</p></li>
+<li><p><strong>callbacks</strong> (<em>Iterable</em><em>[</em><em>Callback</em><em>]</em><em>, </em><em>optional</em>) – The callbacks used during training.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tstoolkit.models.SplitType" title="tstoolkit.models.SplitType"><span class="pre">SplitType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SplitType.VALID</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager.evaluate" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the validation set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.ndarray</em>) – The inputs of shape (batch_size, n_vars, seq_len)</p></li>
+<li><p><strong>y_true</strong> (<em>np.ndarray</em>) – The targets of shape (batch_size, n_vars, horizon)</p></li>
+<li><p><strong>split_type</strong> (<a class="reference internal" href="#tstoolkit.models.SplitType" title="tstoolkit.models.SplitType"><em>SplitType</em></a><em>, </em><em>optional</em>) – The split type., defaults to SplitType.VALID</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Evaluation Metrics Value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager.export_model">
+<span class="sig-name descname"><span class="pre">export_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager.export_model" title="Link to this definition">¶</a></dt>
+<dd><p>Exports the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>artifact_name</strong> (<em>str</em>) – Name of the artifact to be saved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager.find_max_lr">
+<span class="sig-name descname"><span class="pre">find_max_lr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager.find_max_lr" title="Link to this definition">¶</a></dt>
+<dd><p>Find the maximum learning rate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Max Learning Rate</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fits the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>epochs</strong> (<em>int</em>) – Number of Epochs</p></li>
+<li><p><strong>lr_max</strong> (<em>float</em><em> | </em><em>None</em><em>, </em><em>optional</em>) – Learning Rate, defaults to None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager.get_forecast_plot">
+<span class="sig-name descname"><span class="pre">get_forecast_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sel_vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager.get_forecast_plot" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the forecast plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.ndarray</em>) – The inputs of shape (batch_size, n_vars, seq_len)</p></li>
+<li><p><strong>y_true</strong> (<em>np.ndarray</em>) – The targets of shape (batch_size, n_vars, horizon)</p></li>
+<li><p><strong>y_pred</strong> (<em>np.ndarray</em>) – The predictions of shape (batch_size, n_vars, horizon)</p></li>
+<li><p><strong>sel_vars</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to plot the variable separately., defaults to True</p></li>
+<li><p><strong>idx</strong> (<em>int</em><em>, </em><em>optional</em>) – The index of the sample in the batch to plot., defaults to 0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager.get_summary">
+<span class="sig-name descname"><span class="pre">get_summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager.get_summary" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the summary of the learner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Summary</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager.load_model">
+<span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager.load_model" title="Link to this definition">¶</a></dt>
+<dd><p>Loads the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>artifact_name</strong> (<em>str</em>) – Name of the artifact to be loaded.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiLearnerManager.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#tstoolkit.models.TsaiLearnerManager.predict" title="Link to this definition">¶</a></dt>
+<dd><p>Predicts the targets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>np.ndarray</em>) – The inputs of shape (batch_size, n_vars, seq_len)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predictions of shape (batch_size, n_vars, horizon)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.models.</span></span><span class="sig-name descname"><span class="pre">TsaiModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.models.TsaiModels" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enum that represents the type of Tsai model.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiModels.INCEPTION_TIME_PLUS">
+<span class="sig-name descname"><span class="pre">INCEPTION_TIME_PLUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'InceptionTimePlus'</span></em><a class="headerlink" href="#tstoolkit.models.TsaiModels.INCEPTION_TIME_PLUS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.models.TsaiModels.PATCH_TST">
+<span class="sig-name descname"><span class="pre">PATCH_TST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PatchTST'</span></em><a class="headerlink" href="#tstoolkit.models.TsaiModels.PATCH_TST" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tstoolkit.similarity">
+<span id="tstoolkit-similarity-module"></span><h2>tstoolkit.similarity module<a class="headerlink" href="#module-tstoolkit.similarity" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.similarity.TimeSeriesSimilarityChecker">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.similarity.</span></span><span class="sig-name descname"><span class="pre">TimeSeriesSimilarityChecker</span></span><a class="headerlink" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for performing similarity checks on time series data.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.similarity.TimeSeriesSimilarityChecker.cosine_similarity">
+<span class="sig-name descname"><span class="pre">cosine_similarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.cosine_similarity" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate cosine similarity between two columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>col1</strong> (<em>str</em>) – Name of the first column.</p></li>
+<li><p><strong>col2</strong> (<em>str</em>) – Name of the second column.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Cosine similarity.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.similarity.TimeSeriesSimilarityChecker.dynamic_time_warping">
+<span class="sig-name descname"><span class="pre">dynamic_time_warping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.dynamic_time_warping" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate Dynamic Time Warping (DTW) distance between two columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>col1</strong> (<em>str</em>) – Name of the first column.</p></li>
+<li><p><strong>col2</strong> (<em>str</em>) – Name of the second column.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DTW distance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.similarity.TimeSeriesSimilarityChecker.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit Similarity Checker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>pd.DataFrame</em>) – DataFrame containing time series data with DateTime index.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.similarity.TimeSeriesSimilarityChecker.pearson_correlation">
+<span class="sig-name descname"><span class="pre">pearson_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.pearson_correlation" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate Pearson correlation coefficient between two columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>col1</strong> (<em>str</em>) – Name of the first column.</p></li>
+<li><p><strong>col2</strong> (<em>str</em>) – Name of the second column.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pearson correlation coefficient.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.similarity.TimeSeriesSimilarityChecker.plot_signals">
+<span class="sig-name descname"><span class="pre">plot_signals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.plot_signals" title="Link to this definition">¶</a></dt>
+<dd><p>Plot two columns from the time series data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>col1</strong> (<em>str</em>) – Name of the first column.</p></li>
+<li><p><strong>col2</strong> (<em>str</em>) – Name of the second column.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tstoolkit.utils">
+<span id="tstoolkit-utils-module"></span><h2>tstoolkit.utils module<a class="headerlink" href="#module-tstoolkit.utils" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.utils.</span></span><span class="sig-name descname"><span class="pre">ShowGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot_metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_losses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Callback</span></code></p>
+<p>(Modified) Update a graph of training and validation loss</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.after_epoch">
+<span class="sig-name descname"><span class="pre">after_epoch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.after_epoch" title="Link to this definition">¶</a></dt>
+<dd><p>Plot validation loss in the pbar graph</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.after_fit">
+<span class="sig-name descname"><span class="pre">after_fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.after_fit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.after_train">
+<span class="sig-name descname"><span class="pre">after_train</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.after_train" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.before_fit">
+<span class="sig-name descname"><span class="pre">before_fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.before_fit" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.names">
+<span class="sig-name descname"><span class="pre">names</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['train',</span> <span class="pre">'valid']</span></em><a class="headerlink" href="#tstoolkit.utils.ShowGraph.names" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.order">
+<span class="sig-name descname"><span class="pre">order</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">65</span></em><a class="headerlink" href="#tstoolkit.utils.ShowGraph.order" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.run_valid">
+<span class="sig-name descname"><span class="pre">run_valid</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#tstoolkit.utils.ShowGraph.run_valid" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.utils.ShowGraph.update_graph">
+<span class="sig-name descname"><span class="pre">update_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(6,</span> <span class="pre">4)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.ShowGraph.update_graph" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tstoolkit.utils.mae">
+<span class="sig-prename descclassname"><span class="pre">tstoolkit.utils.</span></span><span class="sig-name descname"><span class="pre">mae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targ</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.mae" title="Link to this definition">¶</a></dt>
+<dd><p>Mean absolute error between <cite>inp</cite> and <cite>targ</cite>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tstoolkit.utils.mse">
+<span class="sig-prename descclassname"><span class="pre">tstoolkit.utils.</span></span><span class="sig-name descname"><span class="pre">mse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targ</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.utils.mse" title="Link to this definition">¶</a></dt>
+<dd><p>Mean squared error between <cite>inp</cite> and <cite>targ</cite>.</p>
+</dd></dl>
+
+</section>
+<section id="module-tstoolkit">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tstoolkit" title="Link to this heading">¶</a></h2>
+<p>Instantiation of tstoolkit.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">modules</a><ul>
+<li><a class="reference internal" href="#module-tstoolkit.anomaly_detection">tstoolkit.anomaly_detection module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector"><code class="docutils literal notranslate"><span class="pre">TimeSeriesAnomalyDetector</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.fit"><code class="docutils literal notranslate"><span class="pre">TimeSeriesAnomalyDetector.fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.plot_anomalies"><code class="docutils literal notranslate"><span class="pre">TimeSeriesAnomalyDetector.plot_anomalies()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.anomaly_detection.TimeSeriesAnomalyDetector.predict"><code class="docutils literal notranslate"><span class="pre">TimeSeriesAnomalyDetector.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-tstoolkit.data_preprocess">tstoolkit.data_preprocess module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.data_preprocess.DataManager"><code class="docutils literal notranslate"><span class="pre">DataManager</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.data_preprocess.DataManager.get_forecasting_data"><code class="docutils literal notranslate"><span class="pre">DataManager.get_forecasting_data()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.data_preprocess.DataManager.interpolate_nulls"><code class="docutils literal notranslate"><span class="pre">DataManager.interpolate_nulls()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.data_preprocess.DataManager.load_data"><code class="docutils literal notranslate"><span class="pre">DataManager.load_data()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.data_preprocess.DataManager.preprocess_data"><code class="docutils literal notranslate"><span class="pre">DataManager.preprocess_data()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.data_preprocess.DataManager.split_data"><code class="docutils literal notranslate"><span class="pre">DataManager.split_data()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.data_preprocess.DataManager.standardize_data"><code class="docutils literal notranslate"><span class="pre">DataManager.standardize_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-tstoolkit.gap_filling">tstoolkit.gap_filling module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.fit"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller.fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.merge_ts"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller.merge_ts()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.plot_ts"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller.plot_ts()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.predict"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-tstoolkit.models">tstoolkit.models module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.models.LearnerManager"><code class="docutils literal notranslate"><span class="pre">LearnerManager</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.SplitType"><code class="docutils literal notranslate"><span class="pre">SplitType</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.models.SplitType.TEST"><code class="docutils literal notranslate"><span class="pre">SplitType.TEST</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.SplitType.TRAIN"><code class="docutils literal notranslate"><span class="pre">SplitType.TRAIN</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.SplitType.VALID"><code class="docutils literal notranslate"><span class="pre">SplitType.VALID</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager.evaluate"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.evaluate()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager.export_model"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.export_model()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager.find_max_lr"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.find_max_lr()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager.fit"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager.get_forecast_plot"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.get_forecast_plot()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager.get_summary"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.get_summary()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager.load_model"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.load_model()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiLearnerManager.predict"><code class="docutils literal notranslate"><span class="pre">TsaiLearnerManager.predict()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiModels"><code class="docutils literal notranslate"><span class="pre">TsaiModels</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiModels.INCEPTION_TIME_PLUS"><code class="docutils literal notranslate"><span class="pre">TsaiModels.INCEPTION_TIME_PLUS</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.models.TsaiModels.PATCH_TST"><code class="docutils literal notranslate"><span class="pre">TsaiModels.PATCH_TST</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-tstoolkit.similarity">tstoolkit.similarity module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker"><code class="docutils literal notranslate"><span class="pre">TimeSeriesSimilarityChecker</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.cosine_similarity"><code class="docutils literal notranslate"><span class="pre">TimeSeriesSimilarityChecker.cosine_similarity()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.dynamic_time_warping"><code class="docutils literal notranslate"><span class="pre">TimeSeriesSimilarityChecker.dynamic_time_warping()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.fit"><code class="docutils literal notranslate"><span class="pre">TimeSeriesSimilarityChecker.fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.pearson_correlation"><code class="docutils literal notranslate"><span class="pre">TimeSeriesSimilarityChecker.pearson_correlation()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.similarity.TimeSeriesSimilarityChecker.plot_signals"><code class="docutils literal notranslate"><span class="pre">TimeSeriesSimilarityChecker.plot_signals()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-tstoolkit.utils">tstoolkit.utils module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph"><code class="docutils literal notranslate"><span class="pre">ShowGraph</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.after_epoch"><code class="docutils literal notranslate"><span class="pre">ShowGraph.after_epoch()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.after_fit"><code class="docutils literal notranslate"><span class="pre">ShowGraph.after_fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.after_train"><code class="docutils literal notranslate"><span class="pre">ShowGraph.after_train()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.before_fit"><code class="docutils literal notranslate"><span class="pre">ShowGraph.before_fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.names"><code class="docutils literal notranslate"><span class="pre">ShowGraph.names</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.order"><code class="docutils literal notranslate"><span class="pre">ShowGraph.order</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.run_valid"><code class="docutils literal notranslate"><span class="pre">ShowGraph.run_valid</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.ShowGraph.update_graph"><code class="docutils literal notranslate"><span class="pre">ShowGraph.update_graph()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tstoolkit.utils.mae"><code class="docutils literal notranslate"><span class="pre">mae()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.utils.mse"><code class="docutils literal notranslate"><span class="pre">mse()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-tstoolkit">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="toolkit.html"
+                          title="previous chapter">Toolkit</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tutorials.html"
+                          title="next chapter">tutorials</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tstoolkit.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorials.html" title="tutorials"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="toolkit.html" title="Toolkit"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Time Series Toolkit</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="toolkit.html" >Toolkit</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">modules</a></li>
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Aimino Tech GmbH.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

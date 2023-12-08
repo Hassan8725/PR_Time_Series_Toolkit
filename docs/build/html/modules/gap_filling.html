@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Gap Filling &#8212; Time Series Toolkit  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=0e68e314" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cd74e5c4" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Similarity" href="similarity.html" />
+    <link rel="prev" title="Forecasting" href="forecasting.html" />
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="similarity.html" title="Similarity"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="forecasting.html" title="Forecasting"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Time Series Toolkit</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../toolkit.html" accesskey="U">Toolkit</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Gap Filling</a></li>
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+  <section id="gap-filling">
+<h1>Gap Filling<a class="headerlink" href="#gap-filling" title="Link to this heading">¶</a></h1>
+<section id="module-tstoolkit.gap_filling">
+<span id="tstoolkit-gap-filling-module"></span><h2>tstoolkit.gap_filling module<a class="headerlink" href="#module-tstoolkit.gap_filling" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tstoolkit.gap_filling.</span></span><span class="sig-name descname"><span class="pre">TimeSeriesGapFiller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seasonal_periods</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for Filling Gaps in Time Series data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>seasonal_periods</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of periods in a
+complete seasonal cycle, e.g. 4 for quarterly data or 7
+for daily data with a weekly cycle, defaults to 60</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_ts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_ts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fitting Gap Filling Method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>first_ts</strong> (<em>pd.Series</em>) – Part of Time series before the gap.</p></li>
+<li><p><strong>second_ts</strong> (<em>pd.Series</em>) – Part of time series after the gap.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller.merge_ts">
+<span class="sig-name descname"><span class="pre">merge_ts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.merge_ts" title="Link to this definition">¶</a></dt>
+<dd><p>Returning a merged time series of all three parts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Merged Time series</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.Series</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller.plot_ts">
+<span class="sig-name descname"><span class="pre">plot_ts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.plot_ts" title="Link to this definition">¶</a></dt>
+<dd><p>Plot all three parts of time series combined.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tstoolkit.gap_filling.TimeSeriesGapFiller.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.predict" title="Link to this definition">¶</a></dt>
+<dd><p>Getting the filled time series.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Filled Time Series</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.Series</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Gap Filling</a><ul>
+<li><a class="reference internal" href="#module-tstoolkit.gap_filling">tstoolkit.gap_filling module</a><ul>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller</span></code></a><ul>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.fit"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller.fit()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.merge_ts"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller.merge_ts()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.plot_ts"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller.plot_ts()</span></code></a></li>
+<li><a class="reference internal" href="#tstoolkit.gap_filling.TimeSeriesGapFiller.predict"><code class="docutils literal notranslate"><span class="pre">TimeSeriesGapFiller.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="forecasting.html"
+                          title="previous chapter">Forecasting</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="similarity.html"
+                          title="next chapter">Similarity</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/gap_filling.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="similarity.html" title="Similarity"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="forecasting.html" title="Forecasting"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Time Series Toolkit</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../toolkit.html" >Toolkit</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Gap Filling</a></li>
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright PR Lab.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

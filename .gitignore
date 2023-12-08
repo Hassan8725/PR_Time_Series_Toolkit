@@ -8,7 +8,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -166,3 +165,4 @@ cython_debug/
 data/
 artifacts/
 run/
+exp_notebooks/models
