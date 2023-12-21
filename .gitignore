@@ -166,3 +166,4 @@ data/
 artifacts/
 run/
 exp_notebooks/models
+.vscode
