@@ -167,3 +167,4 @@ artifacts/
 run/
 exp_notebooks/models
 .vscode
+exp_notebooks/
