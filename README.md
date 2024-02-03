@@ -33,25 +33,6 @@
 
 Welcome to the Time Series Toolkit! This toolkit is designed to assist you in various aspects of time series data analysis and forecasting. Below, we provide detailed explanations for each section of this toolkit.
 
-#### Time Series data on Gas Chromatography
-
-Gas chromatography (GC) is an analytical technique used to separate and analyze compounds within a sample. It finds applications across various scientific fields such as chemistry, pharmaceuticals, environmental science, and forensics.
-
-### Principle of Gas Chromatography
-
-Gas chromatography functions by separating a mixture into its individual components based on their distribution between a stationary phase and a mobile phase within a chromatographic column. When the sample is vaporized and injected into the GC system, the components interact differently with the stationary phase, resulting in varied travel rates through the column, hence achieving separation.
-
-### Components of Gas Chromatography
-
-1. **Injector:** This component introduces the sample into the gas chromatograph. It vaporizes the sample and injects it into the carrier gas stream, which carries the sample through the column.
-
-2. **Column:** The column is the core of the gas chromatograph. It consists of a long, coiled tube packed with a stationary phase or coated with it on the inner wall. The interactions between sample components and the stationary phase cause separation.
-
-3. **Carrier Gas:** Typically an inert gas like helium, nitrogen, or hydrogen, the carrier gas transports the sample through the column.
-
-4. **Detector:** The detector identifies and quantifies the separated components as they elute from the column. Common detectors include flame ionization detector (FID), thermal conductivity detector (TCD), electron capture detector (ECD), and mass spectrometer (MS).
-
-Gas chromatography is a powerful tool for analyzing complex mixtures, identifying compounds, and quantifying their presence within a sample, making it an invaluable technique in analytical chemistry and various scientific disciplines.
 
 ## Data Preprocessing Module
 
